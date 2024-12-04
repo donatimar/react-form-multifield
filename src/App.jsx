@@ -9,7 +9,7 @@ const App = () => {
     title: "",
     image: "",
     content: "",
-    category: "", // Campo vuoto inizialmente
+    category: "",
     published: false,
   });
   const [idCounter, setIdCounter] = useState(1);
@@ -33,7 +33,7 @@ const App = () => {
         title: "",
         image: "",
         content: "",
-        category: "", // Resetta il campo categoria a vuoto
+        category: "",
         published: false,
       });
       setIdCounter(idCounter + 1);
