@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaTrash } from "react-icons/fa";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -14,7 +14,14 @@ const App = () => {
   });
   const [idCounter, setIdCounter] = useState(1);
 
-  // Funzione per gestire il cambio dei valori del form
+  // Alert quando si pubblica un articolo
+  useEffect(() => {
+    if (formData.published) {
+      alert("Stai per pubblicare un articolo");
+    }
+  }, [formData.published]);
+
+  // Funzione gestione cambio dei valori del form
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
     setFormData({
