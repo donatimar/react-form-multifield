@@ -151,7 +151,11 @@ const App = () => {
               <span className="badge bg-secondary">
                 Categoria: {article.category}
               </span>
-              <span className="badge bg-success mt-2">
+              <span
+                className={`badge ${
+                  article.published ? "bg-success" : "bg-warning"
+                } mt-2`}
+              >
                 {article.published ? "Pubblicato" : "Bozza"}
               </span>
             </li>
